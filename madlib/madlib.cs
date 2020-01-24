@@ -35,11 +35,11 @@ public class madlib : MonoBehaviour
 
     int linesofcode = 25;
 
-    int dog = 1;
+    int dog = 1; 
 
     int phones = 2;
 
-    float cakes = 3.;
+    float cakes = 3;
 
     int poop = 0;
 
@@ -60,17 +60,5 @@ public class madlib : MonoBehaviour
     Debug.Log("im gonna eat" + cakes + ("and thats not a lie"));
 
     Debug.Log("i give 0" + poop + ("about sports"));
-
-
-
-
-
-
-
-
-
-
-
-    }
 
 }
