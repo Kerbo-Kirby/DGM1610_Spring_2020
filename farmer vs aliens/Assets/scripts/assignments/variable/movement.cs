@@ -13,7 +13,7 @@ public class movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(0, 0, 10);
+        transform.Translate(0, 0, .5f);
     }
 
     void OnCollisionEnter(Collision other)
