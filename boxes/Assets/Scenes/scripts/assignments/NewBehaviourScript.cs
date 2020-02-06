@@ -2,17 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class lookatcube : MonoBehaviour
+public class NewBehaviourScript : MonoBehaviour
 {
-
-
-    public Transform target;
-    
-    
-    
-    
-    
-    
     // Start is called before the first frame update
     void Start()
     {
@@ -22,8 +13,6 @@ public class lookatcube : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        transform.LookAt(target);
         
     }
 }
