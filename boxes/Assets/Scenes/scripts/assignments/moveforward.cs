@@ -2,19 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class lookatcube : MonoBehaviour
+public class moveforward : MonoBehaviour
 {
 
 
-    public Transform target;
-    
-    
-    
+    public float speed;
     
     
     
     // Start is called before the first frame update
     void Start()
+
+
+        
     {
         
     }
@@ -22,8 +22,6 @@ public class lookatcube : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        transform.LookAt(target);
-        
+        transform.Translate(Vector3.forward * Time.deltaTime * speed);
     }
 }

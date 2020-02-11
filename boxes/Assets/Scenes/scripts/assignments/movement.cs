@@ -15,7 +15,7 @@ public class movement : MonoBehaviour
 
     public float turn = 50;
 
-
+    public GameObject projectile;
     void Start()
     {
         transform.Translate(Vector3.up * Time.deltaTime);
@@ -53,37 +53,20 @@ public class movement : MonoBehaviour
         Debug.Log(" you put your right foot in and you do the hokey pokey ");
              //angles the box only works if i dont have rigibody on
 
-        if (Input.GetKey(KeyCode.F))
-            transform.Rotate(Vector3.left * turn * Time.deltaTime);
+     
 
-        if (Input.GetKey(KeyCode.R))
-            transform.Rotate(Vector3.right * turn * Time.deltaTime);
+        ///fire
+        if(Input.GetKeyDown(KeyCode.F))
+        {
+            Instantiate(projectile, transform.position, projectile.transform.rotation);
+        }
+
+
+
 
       
 
-        //it just shoot up to the sky not a jump but i feel accomplished but if rigid body is on its a weird uncontrolled jump
-        if (Input.GetKey(KeyCode.Q))
-            transform.Translate(Vector3.up * speed * Time.deltaTime );
-
-        Debug.Log("your either jumping or up in ther air either way your doing something");
-
-
-
-
-
-
-
-
-
-
-        //goes down but only if there is no rigid body
-        if (Input.GetKey(KeyCode.Z))
-            transform.Translate(Vector3.down * speed * Time.deltaTime);
-        Debug.Log("your going down down down to the bottom of the sea!!!");
-
-
-
-
+        
 
 
 

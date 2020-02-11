@@ -2,8 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class destroy : MonoBehaviour
+public class destoryprojectile : MonoBehaviour
+
+
 {
+
+    public float timetodestroy;
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +20,6 @@ public class destroy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Destroy(gameObject, timetodestroy);
     }
 }
