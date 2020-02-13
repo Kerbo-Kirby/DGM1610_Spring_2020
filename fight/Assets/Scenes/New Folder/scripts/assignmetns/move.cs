@@ -8,6 +8,12 @@ public class move : MonoBehaviour
 
 
     public float fast = 15;
+
+
+
+    public float bulletspeed = 2;
+
+    public float jump = 2;
     void Start()
     {
         
@@ -16,6 +22,11 @@ public class move : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+
+
+        transform.Translate(Vector3.forward * Time.deltaTime * bulletspeed);
+
         if (Input.GetKey(KeyCode.W))
             transform.Translate(Vector3.forward * fast * Time.deltaTime);
 
@@ -29,6 +40,9 @@ public class move : MonoBehaviour
 
         if (Input.GetKey(KeyCode.D))
             transform.Translate(Vector3.right* fast * Time.deltaTime);
+
+        if (Input.GetKey(KeyCode.Space))
+            transform.Translate(Vector3.up * jump * Time.deltaTime);
 
     }
 }
