@@ -12,9 +12,9 @@ public class bullet1 : MonoBehaviour
     public float vert;
     public float horiz;
     public GameObject projectilePre;
-
-
-
+    
+    /// an atempt was made to apply what i learned in class
+    
     void Start()
     {
 

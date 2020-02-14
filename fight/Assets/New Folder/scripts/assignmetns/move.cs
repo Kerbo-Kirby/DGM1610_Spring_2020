@@ -11,7 +11,7 @@ public class move : MonoBehaviour
 
 
 
-    public float bulletspeed = 2;
+    
 
     public float jump = 2;
     void Start()
@@ -25,7 +25,6 @@ public class move : MonoBehaviour
 
 
 
-        transform.Translate(Vector3.forward * Time.deltaTime * bulletspeed);
 
         if (Input.GetKey(KeyCode.W))
             transform.Translate(Vector3.forward * fast * Time.deltaTime);

@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class spawnprjectile : MonoBehaviour
 {
-    // Start is called before the first frame update
-
-
+    
+        /// /help with alexa
+        
 
     public GameObject bulletPrefab;
-
 
     public GameObject spawnPoint;
 
@@ -18,14 +17,13 @@ public class spawnprjectile : MonoBehaviour
     {
         
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
             Instantiate(bulletPrefab, spawnPoint.transform.position, Quaternion.identity);
-
+            Debug.Log("shoot that mother trucker");
         }
     }
 }

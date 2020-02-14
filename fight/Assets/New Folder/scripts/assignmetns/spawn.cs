@@ -12,7 +12,7 @@ public class spawn : MonoBehaviour
 
 
     /// <summary>
-    /// //example from class
+    /// //example from class and trying to input it in other ways 
     /// </summary>
     void Start()
     {
@@ -28,6 +28,9 @@ public class spawn : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             Instantiate(enemyPrefabs[enemyIndex], new Vector3(0, 0, 0), enemyPrefabs[enemyIndex].transform.rotation);
+            Debug.Log("he just wants to live");
+                
+
         }
 
 
