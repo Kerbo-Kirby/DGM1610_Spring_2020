@@ -39,6 +39,12 @@ public class creative : MonoBehaviour
         if(Input.GetKey(KeyCode.S))
             transform.Translate(Vector3.back * walk * Time.deltaTime);
 
+        if (Input.GetKey(KeyCode.A))
+            transform.Translate(Vector3.right * walk * Time.deltaTime);
+
+        if (Input.GetKey(KeyCode.D))
+            transform.Translate(Vector3.left * walk * Time.deltaTime);
+
 
         if (Input.GetKey(KeyCode.Space))
             transform.Translate(0,.5f,0);

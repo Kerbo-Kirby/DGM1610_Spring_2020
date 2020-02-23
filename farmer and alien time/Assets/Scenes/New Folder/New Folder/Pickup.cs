@@ -2,36 +2,32 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class pickup : MonoBehaviour
+public class Pickup : MonoBehaviour
 {
     // Start is called before the first frame update
 
-
-    public int pointsToAdd;
-
-
+    public string Name;
+    public string Type;
+    public int Add;
 
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
-     void OnTriggerEnter(Collider other)
+
+    protected void OnTriggerEnter(Collider other)
     {
-
-       
-        if (other.gameObject.CompareTag("player")){
-
-            scoremanager.addPoints(pointsToAdd);
+        if (other.gameObject.CompareTag("Player"))
+        {
+            Score.AddPoints(Add);
             Destroy(gameObject);
         }
     }
-
-
 }
