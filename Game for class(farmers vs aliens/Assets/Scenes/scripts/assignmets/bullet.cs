@@ -4,55 +4,36 @@ using UnityEngine;
 
 public class bullet : MonoBehaviour
 {
-    // Start is called before the first frame update
-
-
-
     public int damage = 1;
-
-
     public int time = 5;
-
-
-
-
-
 
     void Start()
     {
-        StartCoroutine(destroybullet());
+        StartCoroutine(DestroyBullet());
     }
 
-
-     void OnCollisionEnter(Collision other)
+    void OnCollisionEnter(Collision other)
     {
-   if (other.gameObject.CompareTag("enemy"))
-
+        if (other.gameObject.CompareTag("Enemy"))
         {
             var hit = other.gameObject;
             var health = hit.GetComponent<EnemyHealth>();
 
-            if(health != null)
+            if (health != null)
             {
-
                 health.TakeDamage(damage);
-                Debug.Log("stop hes already dead");
+                Debug.Log("Ouch, you hit me!");
             }
 
-
         }
+
     }
 
-
-
-    IEnumerator destroybullet()
-
+    IEnumerator DestroyBullet()
     {
-
         yield return new WaitForSeconds(time);
         Destroy(gameObject);
-
     }
- 
-    
+
+
 }
