@@ -13,7 +13,9 @@ public class move : MonoBehaviour
 
     public float walk = 2;
 
-    public float jump = 1;
+    private float jump = 1;
+
+    public GameObject target;
     /// i wanted to more with movement still which i know im doing a lot but its still got me curious
     /// /* https://docs.unity3d.com/ScriptReference/Input.GetAxis.html */
     //
@@ -36,18 +38,24 @@ public class move : MonoBehaviour
         if (Input.GetKey(KeyCode.W))
             transform.Translate(Vector3.forward * walk * Time.deltaTime);
 
+
         if (Input.GetKey(KeyCode.S))
             transform.Translate(Vector3.back * walk * Time.deltaTime);
 
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.D))
             transform.Translate(Vector3.right * walk * Time.deltaTime);
 
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.A))
             transform.Translate(Vector3.left * walk * Time.deltaTime);
+
+
+        if (Input.GetKey(KeyCode.Space))
+            transform.Translate(Vector3.up * jump * Time.deltaTime);
 
 
         if (Input.GetKey(KeyCode.Space))
             transform.Translate(0, .5f, 0);
 
     }
+      
 }
