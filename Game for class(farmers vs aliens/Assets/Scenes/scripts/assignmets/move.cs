@@ -15,13 +15,22 @@ public class move : MonoBehaviour
 
     private float jump = 1;
 
+
+    private float jumpheight;
+
+    bool isGrouded;
+
+    private Rigidbody rb;
+
+    public GameObject prefabProjectile;
+
     public GameObject target;
     /// i wanted to more with movement still which i know im doing a lot but its still got me curious
     /// /* https://docs.unity3d.com/ScriptReference/Input.GetAxis.html */
     //
     void Start()
     {
-
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -53,9 +62,55 @@ public class move : MonoBehaviour
             transform.Translate(Vector3.up * jump * Time.deltaTime);
 
 
-        if (Input.GetKey(KeyCode.Space))
-            transform.Translate(0, .5f, 0);
+    }
+
+
+    private void FixedUpdate()
+    {
+        if (Input.GetButtonDown("jump") && isGrouded)
+
+            rb.AddForce(Vector3.up * jump * 10 * Time.deltaTime);
 
     }
-      
+
+    }
+
+        
+    void OnCollisionEnter (Collision other)
+{
+    if (other.gameObject.CompareTag("floor")) ||
+
+
+
+    {
+        isGrouned = true;
+        Debug.Log("not on floor");
+
+    }
+
+
+
 }
+
+    void OncollisionExit((Collision other) || other.gameobject.comparetag("ob"))
+    
+{
+
+if (other.gameObject.CompareTag("gloor")
+     {
+
+        isGrounded = false;
+            Debug.Log("dkjf");
+
+        
+
+
+    }
+
+
+}
+    }
+
+   
+
+
