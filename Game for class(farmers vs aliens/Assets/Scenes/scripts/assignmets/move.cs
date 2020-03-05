@@ -76,40 +76,33 @@ public class move : MonoBehaviour
     }
 
         
-    void OnCollisionEnter (Collision other)
-{
-    if (other.gameObject.CompareTag("floor")) ||
+   // void OnCollisionEnter (Collision other)
+//{//
+    //if (other.gameObject.CompareTag("floor"))
 
 
 
-    {
-        isGrouned = true;
-        Debug.Log("not on floor");
+   // {
+       // isGrouned = true;
+       // Debug.Log("not on floor");
 
-    }
+//   }
 
 
 
-}
+//}
 
-    void OncollisionExit((Collision other) || other.gameobject.comparetag("ob"))
+   // void OncollisionExit((Collision other) || other.gameobject.comparetag("ob"))
     
-{
+//if (other.gameObject.CompareTag("gloor")
+     
 
-if (other.gameObject.CompareTag("gloor")
-     {
-
-        isGrounded = false;
-            Debug.Log("dkjf");
-
+      //  isGrounded = false;
+        //    Debug.Log("dkjf");
+    
         
 
 
-    }
-
-
-}
-    }
 
    
 

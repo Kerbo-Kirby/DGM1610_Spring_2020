@@ -9,7 +9,7 @@ public class force1 : MonoBehaviour
 
 
    // playing with rigid bodys by using this code example right here
-    public float thrust = 1.0f;
+    public float yeet = 1.0f;
     public Rigidbody rb;
 
     void Start()
@@ -19,6 +19,7 @@ public class force1 : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.AddForce(transform.forward * Time.deltaTime * thrust);
+        rb.AddForce(transform.forward * Time.deltaTime * yeet);
+        Debug.Log("use the shwarts i mean force");
     }
 }
