@@ -5,8 +5,7 @@ using UnityEngine;
 public class move : MonoBehaviour
 {
     // Start is called before the first frame update
-
-   public float MoveSpeed;
+    public float MoveSpeed = 2;
 
 
     void Start()
@@ -22,7 +21,15 @@ public class move : MonoBehaviour
         else if (Input.GetKey(KeyCode.A))
             transform.Translate(Vector3.left * Time.deltaTime * MoveSpeed);
 
-       
+
+       if (Input. GetKey(KeyCode.S))
+           transform.Translate(Vector3.back * Time.deltaTime * MoveSpeed);
+
+        else if (Input.GetKey(KeyCode.D))
+            transform.Translate(Vector3.right * Time.deltaTime * MoveSpeed);
+
+
+
     }
 }
 
