@@ -13,6 +13,7 @@ public class move : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKey(KeyCode.D))
+            transform.Translate(Vector3.left *Time.deltaTime.)
     }
 }
