@@ -13,7 +13,7 @@ public class forloop : MonoBehaviour
     {
         for (int i = 0; i < ball; i++)
 
-            Debug.Log("ball" + i);
+            Debug.Log("I want ball. i want 5 balls" + i);
 
         
 

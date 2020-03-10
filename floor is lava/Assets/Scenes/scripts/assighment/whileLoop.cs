@@ -7,13 +7,15 @@ public class whileLoop : MonoBehaviour
 
 
 
-    int cakeEaten = 10;
+    int cakeEaten = 2;
     void Start()
     {
 
         while (cakeEaten > 0)
+        {
             Debug.Log("you ate a lot!!! im worried");
-        cakeEaten--;
+            cakeEaten--;
+        }
     }
 
     
