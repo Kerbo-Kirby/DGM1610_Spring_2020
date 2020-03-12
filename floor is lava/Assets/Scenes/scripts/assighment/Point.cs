@@ -8,17 +8,7 @@ public class Point : MonoBehaviour
     public static int star;
 
    
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+    
 
     public static void AddPoints(int pointsToAdd)
     {
