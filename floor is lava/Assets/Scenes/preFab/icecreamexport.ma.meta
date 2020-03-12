@@ -1,16 +1,22 @@
 fileFormatVersion: 2
-guid: ff205f5b9b7be4ff4b52365d65d4c8e3
+guid: 83cbdcb7105c296409cc15f1385efd0b
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
-    100002: BuildingMedium_Combined
+    100002: pCube1
+    100004: pCube2
     400000: //RootNode
-    400002: BuildingMedium_Combined
-    2100000: TemplateEnvironment.003
-    2300000: BuildingMedium_Combined
-    3300000: BuildingMedium_Combined
-    4300000: BuildingMedium_Combined
+    400002: pCube1
+    400004: pCube2
+    2100000: wood
+    2100002: icecream
+    2300000: pCube1
+    2300002: pCube2
+    3300000: pCube1
+    3300002: pCube2
+    4300000: pCube1
+    4300002: pCube2
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -67,7 +73,7 @@ ModelImporter:
     hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
-    normalImportMode: 1
+    normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
