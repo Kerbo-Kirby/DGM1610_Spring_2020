@@ -4,39 +4,25 @@ using UnityEngine;
 
 public class camera : MonoBehaviour
 
-{ 
-
-    public float follow;
-
-
-    public Transform player;
-    
-
-
-
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-// Update is called once per frame
-void Update()
 {
 
 
-
-        transform.LookAt(Vector3.zero);
-        
+    public float MoveSpeed; 
 
 
+    void Update()
+    {
+
+        if (Input.GetKey(KeyCode.A))
+            transform.Translate(Vector3.left* Time.deltaTime* MoveSpeed);
+
+
+     
+
+        else if (Input.GetKey(KeyCode.D))
+            transform.Translate(Vector3.right* Time.deltaTime* MoveSpeed);
 
 
 
-
-
-
-    }
+}
 }
