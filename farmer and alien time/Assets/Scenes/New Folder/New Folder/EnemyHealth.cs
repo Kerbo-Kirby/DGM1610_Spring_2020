@@ -19,20 +19,17 @@ public class EnemyHealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        currentHealth = maxHealth;
+   //     currentHealth = maxHealth;
     }
 
-    public void takedamage(int amont);
-    if(currentHealth <= 0;)
+  //  public void takedamage(int amont);
+  //  if(currentHealth <= 0;)
         
-       currentHealth <= 0;
-        print("enemy be dead");
-    Transform.posistion = spawnPoint.position;
+     //  currentHealth <= 0;
+       // print("enemy be dead");
+  //  Transform.posistion = spawnPoint.position;
     
     }
-}
-}
-}
 
 
 
@@ -40,9 +37,7 @@ public class EnemyHealth : MonoBehaviour
 
 
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-}
+
+
+
+
