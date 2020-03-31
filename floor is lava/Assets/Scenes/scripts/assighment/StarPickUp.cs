@@ -8,8 +8,6 @@ public class StarPickUp : MonoBehaviour
     {
 
 
-
-
         public string pickupName;
 
         public string pickupType;
@@ -17,18 +15,14 @@ public class StarPickUp : MonoBehaviour
         public int StarpointsToAdd;
 
 
-       
-        
-
         public void OnTriggerEnter(Collider other)
         {
-            if (gameObject.CompareTag("Player"))
+            if (other.gameObject.CompareTag("Player"))
             {
                 Point.AddPoints(StarpointsToAdd);
                 Destroy(gameObject);
             }
         }
+
     }
 }
-
-

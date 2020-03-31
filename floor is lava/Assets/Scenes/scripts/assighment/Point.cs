@@ -10,9 +10,9 @@ public class Point : MonoBehaviour
    
     
 
-    public static void AddPoints(int pointsToAdd)
+    public static void AddPoints(int StarpointsToAdd)
     {
-        star += pointsToAdd;
+        star += StarpointsToAdd;
         Debug.Log("star point: " + star);
      
     }
