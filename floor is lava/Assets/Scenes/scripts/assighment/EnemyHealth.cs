@@ -8,7 +8,7 @@ public class EnemyHealth : MonoBehaviour
     public int startingHealth;
     public int healthAmount= 2;
     public Transform enemySpawn;
-    
+    public int points;
 
     void Start()
     {
@@ -31,7 +31,9 @@ public class EnemyHealth : MonoBehaviour
         {
             startingHealth = 0;
             print("hes dead jim");
-           
+
+            ScoreManager.AddPoints(points);
+
             transform.position = enemySpawn.position;
             transform.rotation = enemySpawn.rotation;
           

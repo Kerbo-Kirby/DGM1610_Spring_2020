@@ -4,41 +4,32 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-
     public int damage = 1;
-    public int time = 4;
-
+    public int time = 3;
     void Start()
     {
-        StartCoroutine(DestroyBullet());
+
     }
 
-    void OnCollisionEnter(Collision other)
+    //
+    private void OnCollisionEnter(Collision other)
     {
 
+        //it gets enemys health  as the variable to dsthis script 
+        var health = other.gameObject.GetComponent<EnemyHealth>();
 
-        /// if the enemy is hit it will get the enemy health varavle  and if its hit it takes damage 
-        if (other.gameObject.CompareTag("Enemy"))
+        //if enemy is hit it takes 1 damag3e
+
+        if (health != null)
         {
-            var hit = other.gameObject;
-            var health = hit.GetComponent<EnemyHealth>();
-
-            if (health != null)
-            {
-                health.TakeDamage(damage);
-                Debug.Log("Ouch, you hit me!");
-            }
-
+            health.TakeDamage(damage);
         }
-
     }
-    /// ageter the set amouint of time which is 4 secounds the bullet is destroyed
-  
+    //destoys bullet in the amount of time set
     IEnumerator DestroyBullet()
     {
+
         yield return new WaitForSeconds(time);
         Destroy(gameObject);
     }
-
-
 }
