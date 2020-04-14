@@ -4,17 +4,42 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public class Health_Pickup : pickUp
 
 
-        //it calls the pick up sctript and here it sets the banana health and ounce the plaiyer pick it up they get 5 more health
 
+    //applying enemy health into player health script
+
+
+    public int healthAmt = 5;
+    public int CurrHealth;
+    public Transform PlayerSpawn;
+
+
+    private void Start()
     {
-        public int healthAmt = 5;
-
-
-
-
+        CurrHealth = healthAmt;
+        PlayerSpawn = GameObject.Find("PlayerSpawn").transform;
     }
+    public void TakeDamage(int amount)
+    {
+        CurrHealth -= amount;
+        if (healthAmt <= 0)
+        {
 
+            CurrHealth = 0;
+
+
+
+            transform.position = PlayerSpawn.position;
+            transform.rotation = PlayerSpawn.rotation;
+
+            CurrHealth = healthAmt;
+
+
+        }
+    }
 }
+
+        
+      
+
