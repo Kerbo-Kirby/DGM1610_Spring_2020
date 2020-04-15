@@ -7,6 +7,7 @@ public class move : MonoBehaviour
     // Start is called before the first frame update
     public float MoveSpeed = 2;
 
+    public float rotate = 10;
 
     void Start()
     {
@@ -28,7 +29,11 @@ public class move : MonoBehaviour
         else if (Input.GetKey(KeyCode.D))
             transform.Translate(Vector3.right * Time.deltaTime * MoveSpeed);
 
+        if (Input.GetKey(KeyCode.LeftArrow))
+            transform.Rotate(Vector3.up * Time.deltaTime * rotate);
 
+        if (Input.GetKey(KeyCode.RightArrow))
+            transform.Rotate(Vector3.down * Time.deltaTime * rotate);
 
     }
 }
