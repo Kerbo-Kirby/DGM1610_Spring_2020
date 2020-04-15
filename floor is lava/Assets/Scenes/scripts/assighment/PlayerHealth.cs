@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -10,34 +11,45 @@ public class PlayerHealth : MonoBehaviour
     //applying enemy health into player health script
 
 
-    public int healthAmt = 5;
-    public int CurrHealth;
-    public Transform PlayerSpawn;
+    //  public const int maxHealth = 100;
 
-
-    private void Start()
-    {
-        CurrHealth = healthAmt;
-        PlayerSpawn = GameObject.Find("PlayerSpawn").transform;
-    }
-    public void TakeDamage(int amount)
-    {
-        CurrHealth -= amount;
-        if (healthAmt <= 0)
-        {
-
-            CurrHealth = 0;
+    // public int currentHealth = maxHealth;
 
 
 
-            transform.position = PlayerSpawn.position;
-            transform.rotation = PlayerSpawn.rotation;
-
-            CurrHealth = healthAmt;
 
 
-        }
-    }
+    //  public Text hp;
+
+    // public Text maxHp;
+
+
+
+
+
+    //  void Update()
+    // {
+    //  hp.text = currentHealth.ToString();
+
+    //   maxHp.text = maxHealth.ToString();
+    //
+    //  }//
+
+
+
+
+
+    //public void takedamage(int amount)
+    //  {
+
+    //  currentHealth -= amount;
+    //  if(currentHealth <= 0)
+    //   {
+    //   currentHealth = 0;//
+    ///  print("game over");///
+    //  }
+    // }
+    //}///
 }
 
         
