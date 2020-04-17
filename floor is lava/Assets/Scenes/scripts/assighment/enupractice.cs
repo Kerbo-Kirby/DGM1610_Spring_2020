@@ -4,22 +4,22 @@ using UnityEngine;
 
 public class Enumerations : MonoBehaviour
 {
-    enum FoodMenu { salad, sandwhich };
+   // enum FoodMenu { salad, sandwhich };
 
-    FoodMenu allfood;
+  //  FoodMenu allfood;
 
     // Start is called before the first frame update
     void Start()
     {
-        allfood = FoodMenu.salad;
+   //     allfood = FoodMenu.salad;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (allfood == FoodMenu.sandwhich)
+      //  if (allfood == FoodMenu.sandwhich)
         {
-            print("yum yum yum!");
+       //     print("yum yum yum!");
         }
     }
 }
