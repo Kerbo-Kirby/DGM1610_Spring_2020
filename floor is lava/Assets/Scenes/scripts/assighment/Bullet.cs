@@ -5,20 +5,20 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public int damage = 1;
-    public int time = 3;
+    public float time = .5f;
     void Start()
     {
 
     }
 
     //
-    private void OnCollisionEnter(Collision other)
+    void OnCollisionEnter(Collision other)
     {
 
         //it gets enemys health  as the variable to dsthis script 
         var health = other.gameObject.GetComponent<EnemyHealth>();
 
-        //if enemy is hit it takes 1 damag3e
+        //if enemy is hit it takes 1 damage
 
         if (health != null)
         {
