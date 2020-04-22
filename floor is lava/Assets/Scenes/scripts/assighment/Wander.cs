@@ -67,9 +67,9 @@ public class Wander : MonoBehaviour
 
         }
 
-        else if (distance <= alerDist) 
+        else if (distance <= alerDist)
 
-        print("somebody wating");
+            print("somebody wating");
         heading = target.position - transform.position;
 
         heading.y = 0;
@@ -84,35 +84,53 @@ public class Wander : MonoBehaviour
 
 
         if (heading.magnitude <= attackDist)
+        {
             print("hes attacking you");
 
-        var health = target.gameObject.GetComponent<PlayerHealth>();
+            var health = target.gameObject.GetComponent<PlayerHealth>();
 
 
-        if (health != null)
-        {
-          //  health.TakeDamage(damage);
+            if (health != null)
+            {
 
+               // health.TakeDamage(damage);
+
+
+            }
 
         }
-
-
 
         else if (distance > alerDist)
         {
+
             timer += Time.deltaTime;
 
+            if (timer >= wanderTimer)
+            {
+                Vector3 newPos = RandomNavSphere(transform.position, wantderRadious, -1);
+                agent.SetDestination(newPos);
+                timer = 0;
+            }
         }
-        if (timer >= wanderTimer) 
 
+
+    }
+        public static Vector3 RandomNavSphere(Vector3 origin, float dist, int layermask)
         {
+            Vector3 randDirection = Random.insideUnitSphere * dist;
 
+            randDirection += origin;
+
+            NavMeshHit navHit;
+
+            NavMesh.SamplePosition(randDirection, out navHit, dist, layermask);
+
+            return navHit.position;
 
         }
 
     }
 
-}
 
 
 

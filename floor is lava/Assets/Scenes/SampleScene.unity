@@ -1336,6 +1336,60 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 476478d873eaa5745904afc76c879e1a, type: 3}
+--- !u!1 &921230546 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 0990a07379c23d5439e7c0b29c3288a7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1659932161}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &921230548
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 921230546}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5076798556035486163, guid: 0990a07379c23d5439e7c0b29c3288a7, type: 3}
+--- !u!114 &921230549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 921230546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b123ee66be63ba4f97d549163ddd0ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pickupName: coin
+  pickupType: money
+  pointsToAdd: -100
+--- !u!95 &921230550
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 921230546}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 40acf909ecfdbe345a9848be8cccf275, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1004243175
 GameObject:
   m_ObjectHideFlags: 0
@@ -2443,7 +2497,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 0990a07379c23d5439e7c0b29c3288a7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 15.932256
+      value: 23.9
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 0990a07379c23d5439e7c0b29c3288a7,
         type: 3}
@@ -2453,7 +2507,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 0990a07379c23d5439e7c0b29c3288a7,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -52.04826
+      value: -39.78
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 0990a07379c23d5439e7c0b29c3288a7,
         type: 3}
@@ -2495,6 +2549,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -3701727588016112575, guid: 0990a07379c23d5439e7c0b29c3288a7,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 57e80c83cd7b6534692441008b8843de, type: 2}
     - target: {fileID: -927199367670048503, guid: 0990a07379c23d5439e7c0b29c3288a7,
         type: 3}
       propertyPath: m_Name
@@ -2781,6 +2840,7 @@ GameObject:
   - component: {fileID: 2048614683}
   - component: {fileID: 2048614684}
   - component: {fileID: 2048614685}
+  - component: {fileID: 2048614686}
   m_Layer: 0
   m_Name: enemy
   m_TagString: enemy
@@ -2926,6 +2986,28 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 10, y: 1, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!195 &2048614686
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2048614676}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 1
+  m_BaseOffset: 0.5
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1001 &3248191586676144980
 PrefabInstance:
   m_ObjectHideFlags: 0
