@@ -18,6 +18,8 @@ public class Bullet : MonoBehaviour
         //it gets enemys health  as the variable to dsthis script 
         var health = other.gameObject.GetComponent<EnemyHealth>();
 
+
+
         //if enemy is hit it takes 1 damage
 
         if (health != null)
@@ -25,6 +27,9 @@ public class Bullet : MonoBehaviour
             health.TakeDamage(damage);
         }
     }
+
+
+
     //destoys bullet in the amount of time set
     IEnumerator DestroyBullet()
     {

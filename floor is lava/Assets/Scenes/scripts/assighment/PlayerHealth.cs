@@ -11,45 +11,46 @@ public class PlayerHealth : MonoBehaviour
     //applying enemy health into player health script
 
 
-    //  public const int maxHealth = 100;
+     public const int maxHealth = 100;
 
-    // public int currentHealth = maxHealth;
-
-
-
-
-
-    //  public Text hp;
-
-    // public Text maxHp;
+     public int currentHealth = maxHealth;
 
 
 
 
 
-    //  void Update()
-    // {
-    //  hp.text = currentHealth.ToString();
+      public Text hp;
 
-    //   maxHp.text = maxHealth.ToString();
-    //
-    //  }//
+    public Text maxHp;
 
 
 
 
 
-    //public void takedamage(int amount)
-    //  {
+      void Update()
+    {
+      hp.text = currentHealth.ToString();
 
-    //  currentHealth -= amount;
-    //  if(currentHealth <= 0)
-    //   {
-    //   currentHealth = 0;//
-    ///  print("game over");///
-    //  }
-    // }
-    //}///
+       maxHp.text = maxHealth.ToString();
+    
+      }
+
+
+
+
+
+
+    public void TakeDamage(int amount)
+     {
+
+     currentHealth -= amount;
+     if(currentHealth <= 0)
+       {
+       currentHealth = 0;//
+   print("game over");//
+      }
+     }
+    
 }
 
         

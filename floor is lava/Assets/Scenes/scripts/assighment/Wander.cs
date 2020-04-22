@@ -93,7 +93,7 @@ public class Wander : MonoBehaviour
             if (health != null)
             {
 
-               // health.TakeDamage(damage);
+                health.TakeDamage(damage);
 
 
             }
