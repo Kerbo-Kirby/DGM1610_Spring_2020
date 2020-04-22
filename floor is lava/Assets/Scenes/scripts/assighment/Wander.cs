@@ -60,7 +60,7 @@ public class Wander : MonoBehaviour
         {
 
             print("enemy sees you");
-            speed += 3;
+            speed += .66f;
             transform.LookAt(target);
             transform.Translate(Vector3.forward * speed * Time.deltaTime);
 
@@ -74,7 +74,7 @@ public class Wander : MonoBehaviour
 
         heading.y = 0;
 
-        speed += 10;
+        speed += .6f;
 
         transform.LookAt(target);
         transform.Translate(Vector3.forward * speed * Time.deltaTime);

@@ -48,6 +48,7 @@ public class PlayerHealth : MonoBehaviour
        {
        currentHealth = 0;//
    print("game over");//
+            Destroy(gameObject);
       }
      }
     
