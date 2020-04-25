@@ -24,8 +24,7 @@ public class bang : MonoBehaviour
             clone = (Rigidbody)Instantiate(projectile, bulletspawn.position, projectile.rotation);
 
             clone.velocity = bulletspawn.TransformDirection(Vector3.forward * Speed);
-
-            Destroy(clone)     ;
+            
            
         }
 

@@ -4,15 +4,27 @@ using UnityEngine;
 
 public class ontriggerAnimtaion : MonoBehaviour
 {
-    // Start is called before the first frame update
+    // following along inhttps://www.youtube.com/watch?v=yE0JdtVTnVk
+
+    public AudioSource shoot;
+
+
+
+
+    //attaing the definition shoot to the audio sound attach to your object
+
     void Start()
     {
-        
+        shoot = GetComponent<AudioSource>();  
     }
 
-    // Update is called once per frame
-    void Update()
+    //once it hits an object floor it will make soud
+     void OnCollisionEnter(Collision collision)
     {
-        
+        if (collision.gameObject.tag == "Floor")
+        {
+
+            shoot.Play();
+        }
     }
 }
