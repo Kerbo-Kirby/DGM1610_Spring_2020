@@ -28,11 +28,11 @@ public class switchPractice : MonoBehaviour
 
         switch (Random)
         {
-            case 1: print("poop");
+            case 1: print("yyeee");
                 break;
 
                 case 2:
-                    print("not poop");
+                    print("hot diggady");
                     break;
             }
         
