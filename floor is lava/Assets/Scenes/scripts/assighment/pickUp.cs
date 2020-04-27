@@ -10,8 +10,7 @@ public class pickUp : MonoBehaviour
 
 
   
-
-    protected void OnTriggerEnter(Collider other)
+     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
