@@ -16,7 +16,7 @@ public class bang : MonoBehaviour
 
         //f is pressed it fires and it will freate rigidbody clones of its self and g= get the position of whrere its shooting from
         //it will then get the speed of it
-        if (Input.GetKey(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.F))
         {
 
             Rigidbody clone;

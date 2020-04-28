@@ -21,7 +21,7 @@ public class PlayerHealth : MonoBehaviour
 
       public Text hp;
 
-   // public Text maxHp;
+    public Text maxHp;
 
 
 
@@ -31,7 +31,7 @@ public class PlayerHealth : MonoBehaviour
     {
       hp.text = currentHealth.ToString();
 
-       // maxHp.text = maxHealth.ToString();
+        maxHp.text = maxHealth.ToString();
 
     }
 
@@ -58,7 +58,9 @@ public class PlayerHealth : MonoBehaviour
             Destroy(gameObject);
          }
      }
-    
+
+   
+
 }
 
         

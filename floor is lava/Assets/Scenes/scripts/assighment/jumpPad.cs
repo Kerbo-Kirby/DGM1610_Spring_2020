@@ -10,12 +10,12 @@ public class jumpPad : MonoBehaviour
    
     
 
-    //player enters the trigger and presses t and it abd tge ibhect wukk gave a rigid body appplied and wil shoot it up 
+    //player enters the trigger and presses space and it abd tge ibhect wukk gave a rigid body appplied and wil shoot it up 
         
 
     void OnTriggerEnter(Collider Player)
     {
-        
+        if(Input.GetKey(KeyCode.Space))
 
            Player.gameObject.CompareTag("Player");
 

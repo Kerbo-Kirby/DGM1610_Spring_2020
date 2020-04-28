@@ -5,7 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public int damage = 1;
-    public float time = .5f;
+    public float time = 5f;
     void Start()
     {
 
