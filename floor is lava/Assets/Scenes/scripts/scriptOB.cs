@@ -22,11 +22,11 @@ public class SO : ScriptableObject
 
     
 
-    /* private void PrintOut(string name, string description){
+    private void PrintOut(string name, string description){
         Debug.Log(name + " "+ description);
         if(name == "Chuck Norris"){
             Debug.Log("Chuck Norris allows this program to run!");
         }
-    }     */
+    }     
 
 }

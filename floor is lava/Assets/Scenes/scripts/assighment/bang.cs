@@ -19,11 +19,11 @@ public class bang : MonoBehaviour
         if (Input.GetKey(KeyCode.F))
         {
 
-           // Rigidbody clone;
+            Rigidbody clone;
 
-           // clone = (Rigidbody)Instantiate(projectile, bulletspawn.position, projectile.rotation);
+            clone = (Rigidbody)Instantiate(projectile, bulletspawn.position, projectile.rotation);
 
-            //clone.velocity = bulletspawn.TransformDirection(Vector3.forward * Speed);
+            clone.velocity = bulletspawn.TransformDirection(Vector3.forward * Speed);
 //
 
         }

@@ -21,7 +21,7 @@ public class PlayerHealth : MonoBehaviour
 
       public Text hp;
 
-    public Text maxHp;
+   // public Text maxHp;
 
 
 
@@ -31,25 +31,32 @@ public class PlayerHealth : MonoBehaviour
     {
       hp.text = currentHealth.ToString();
 
-       maxHp.text = maxHealth.ToString();
-    
-      }
+       // maxHp.text = maxHealth.ToString();
+
+    }
 
 
 
 
 
-
-    public void TakeDamage(int amount)
+    //what happens when player takes damage
+    //it gets the current helt and checks if its less or equal then destroys player if it is so
+     public void TakeDamage(int damage)
      {
 
-     currentHealth -= amount;
-     if(currentHealth <= 0)
-       {
-       currentHealth = 0;//
-   print("game over");//
+
+
+
+        currentHealth -= damage;
+
+         if(currentHealth <= 0) {
+
+            currentHealth = 0;
+
+            print("game over");
+
             Destroy(gameObject);
-      }
+         }
      }
     
 }

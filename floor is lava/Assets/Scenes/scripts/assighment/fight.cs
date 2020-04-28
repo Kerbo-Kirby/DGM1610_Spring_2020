@@ -10,12 +10,12 @@ public class fight : MonoBehaviour
     void OnCollisionEnter(Collision other)
     {
 
-        //it gets enemys health  as the variable to dsthis script 
+        //it gets enemys health  
         var health = other.gameObject.GetComponent<EnemyHealth>();
 
 
 
-        //if enemy is hit it takes 1 damage
+        //this will dagmage theenemy
 
         if (health != null)
         {

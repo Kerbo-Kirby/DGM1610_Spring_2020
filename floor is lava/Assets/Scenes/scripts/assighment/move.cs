@@ -23,8 +23,8 @@ public class move : MonoBehaviour
             transform.Translate(Vector3.left * Time.deltaTime * MoveSpeed);
 
 
-       if (Input. GetKey(KeyCode.S))
-           transform.Translate(Vector3.back * Time.deltaTime * MoveSpeed);
+        if (Input.GetKey(KeyCode.S))
+            transform.Translate(Vector3.back * Time.deltaTime * MoveSpeed);
 
         else if (Input.GetKey(KeyCode.D))
             transform.Translate(Vector3.right * Time.deltaTime * MoveSpeed);
@@ -35,6 +35,10 @@ public class move : MonoBehaviour
         if (Input.GetKey(KeyCode.RightArrow))
             transform.Rotate(Vector3.down * Time.deltaTime * rotate);
 
+
+
+
     }
+      
 }
 
